@@ -4,7 +4,7 @@ import random
 import asyncio
 
 from discord.ext import tasks, commands
-#channel = self.get_channel(513441119841812480)
+#channel = self.get_channel(***channel id)
 
 #client = discord.Client()
 
@@ -58,7 +58,7 @@ class MyClient(discord.Client):
     async def my_background_task(self):
         await self.wait_until_ready()
         counter = 0
-        channel = self.get_channel(513441119841812480)
+        channel = self.get_channel(#***channel id)
         while not self.is_closed():
             counter += 1
 
@@ -82,12 +82,12 @@ class MyClient(discord.Client):
             ############## server join and leave #######
 
     async def on_member_join(self,member: discord.Member):
-        channel = self.get_channel(513421327864954886)
+        channel = self.get_channel(#***channel id)
         await channel.send (f"***{member} joined to my discord server !  :tada: ***")
         print(f"{member} joined the server  {time.strftime('%X')}")  ## koguda txt folderisse logisi ?
 
     async def on_member_remove(self,member: discord.Member):
-        channel = self.get_channel(513421327864954886)
+        channel = self.get_channel(#***channel id)
         await channel.send(f"***{member} has left the server..   🙋 ***")
         print(f"{member} has left the server !  {time.strftime('%X')}")
 
@@ -110,4 +110,4 @@ class MyClient(discord.Client):
             #await message.channel.send('invalid username')
 
 client = MyClient()
-client.run('Njk3ODczOTM4NzgwMzg5NDc2.XpAzLQ.GEo3kdUHRfcVoDpPGqufl4KzmVs')
+client.run('#bot token')
