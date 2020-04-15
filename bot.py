@@ -93,21 +93,7 @@ class MyClient(discord.Client):
 
 
 
-    ################## ban / unban system ###########
-    #def get_prefix(bot,message):
-        #prefixes = ['!']
-
-    @commands.command()
-    @commands.has_permissions(ban_members=True, kick_members=True)
-    async def ban(self,ctx, member :discord.Member, *, reason=None):
-        await member.send(f'You have been banned from ever returning to the Cave. Reason: {reason}. Maybe, just maybe, you can return at a later date.')
-        await member.ban(reason=reason)
-        await ctx.send(f'{member} has been banned from ever coming down to the Cave. Reason: {reason}')
-
-        #if reason == None:
-            #await message.channel.send(file='pics/thorbanhammer.gif')
-        #if member == None or member == message.author:
-            #await message.channel.send('invalid username')
+   
 
 client = MyClient()
 client.run('#bot token')
