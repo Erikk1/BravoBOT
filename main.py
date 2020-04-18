@@ -55,12 +55,12 @@ async def on_message(message):
             ############## server join and leave #######
 @bot.event
 async def on_member_join(member: discord.Member):
-        channel = bot.get_channel(513421327864954886)
+        channel = bot.get_channel(#insert channel id)
         await channel.send (f"***{member} joined to my discord server !  :tada: ***")
         print(f"{member} joined the server  {time.strftime('%X')}")  ## koguda txt folderisse logisi ?
 
 async def on_member_remove(member: discord.Member):
-        channel = bot.get_channel(513421327864954886)
+        channel = bot.get_channel(#insert channel id)
         await channel.send(f"***{member} has left the server..   🙋 ***")
         print(f"{member} has left the server !  {time.strftime('%X')}")
 
@@ -70,7 +70,7 @@ for filename in os.listdir('./cogs'):
         bot.load_extension(f'cogs.{filename[:-3]}') # removing last 3 characters(.py)
 
 try:
-    bot.run('Njk3ODczOTM4NzgwMzg5NDc2.XpYAQg.eyM2c24c--pKCnUiQ98Fu6X2Z1k')
+    bot.run('#insert token here')
 except discord.LoginFailure:
     print("Invalid token")
     exit(1)  # exit 1 means there was issue or error
