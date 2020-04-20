@@ -19,6 +19,6 @@ class Help(commands.Cog):
             embed.add_field(name="*!coin*", value=" write 'flip a coin' ", inline=False)
             embed.add_field(name="*hi*", value=" say 'hi in different languages' ", inline=False)
             await message.channel.send(content=None, embed=embed)
-
+        #await bot.process_commands(message)
 def setup(bot):
     bot.add_cog(Help(bot))

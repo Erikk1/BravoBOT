@@ -5,11 +5,11 @@ import random
 from discord.ext import commands
 
 class BackgroundTask( commands.Cog):
+
     def __init__(self, bot):
         self.bot = bot
         self.bg_task = bot.loop.create_task(self.background_task(bot))  # backround task
-   # def __unload(self):
-       # self.bg_task.cancel()
+
             # spam message to one channel every minute  #
     async def background_task(self,bot):
         await bot.wait_until_ready()
@@ -18,7 +18,7 @@ class BackgroundTask( commands.Cog):
         while not bot.is_closed():
             counter += 1
 
-                    ######################### random office quote post every 180 sec
+                    ######################### random office quote post every 360 sec
             the_office_quotes = [
                         discord.File("pics/1.png"),
                         discord.File('pics/2.png'),
