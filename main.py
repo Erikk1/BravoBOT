@@ -55,12 +55,12 @@ async def on_message(message):
             ############## server join and leave #######
 @bot.event
 async def on_member_join(member: discord.Member):
-        channel = bot.get_channel(513421327864954886)
+        channel = bot.get_channel(###channel id )
         await channel.send (f"***{member} joined to my discord server !  :tada: ***")
         print(f"{member} joined the server  {time.strftime('%X')}")  ## koguda txt folderisse logisi ?
 
 async def on_member_remove(member: discord.Member):
-        channel = bot.get_channel(513421327864954886)
+        channel = bot.get_channel(###channel id )
         await channel.send(f"***{member} has left the server..   🙋 ***")
         print(f"{member} has left the server !  {time.strftime('%X')}")
 
@@ -73,4 +73,4 @@ if __name__ == '__main__':
 			print(f"Loaded cog: {extension}")
 		except Exception as error:
 			print(f"{extension} could not be loaded. [{error}]")
-bot.run('Njk3ODczOTM4NzgwMzg5NDc2.Xpq5eg.00kD7coIllXOqpr9tFgGywCY3LM')
+bot.run('##insert bot token##')
