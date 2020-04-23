@@ -1,4 +1,4 @@
 # BravoBOT
-Discord BOT
+Discord Server BOT
 
-Simple and ongoing discord bot project.
+Simple and ongoing discord.py bot project.
