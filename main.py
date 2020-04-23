@@ -40,7 +40,7 @@ async def on_message(message):
                        # say hi #
 
      if 'hello' in message.content.lower():
-        rndmsg = ["Privet!","Hola!","Tere!","Hello!"]
+        rndmsg = ["Russian: Privet!","Spanish: Hola!","Estonian: Tere!","English: Hello!"]
         await message.channel.send(random.choice(rndmsg))
 
 
@@ -55,12 +55,12 @@ async def on_message(message):
             ############## server join and leave #######
 @bot.event
 async def on_member_join(member: discord.Member):
-        channel = bot.get_channel(###channel id )
+        channel = bot.get_channel(513421327864954886)
         await channel.send (f"***{member} joined to my discord server !  :tada: ***")
         print(f"{member} joined the server  {time.strftime('%X')}")  ## koguda txt folderisse logisi ?
-
+@bot.event
 async def on_member_remove(member: discord.Member):
-        channel = bot.get_channel(###channel id )
+        channel = bot.get_channel(513421327864954886)
         await channel.send(f"***{member} has left the server..   🙋 ***")
         print(f"{member} has left the server !  {time.strftime('%X')}")
 
@@ -73,4 +73,4 @@ if __name__ == '__main__':
 			print(f"Loaded cog: {extension}")
 		except Exception as error:
 			print(f"{extension} could not be loaded. [{error}]")
-bot.run('##insert bot token##')
+bot.run('#insert token here')
